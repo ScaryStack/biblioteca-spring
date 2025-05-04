@@ -117,4 +117,16 @@ public class LibroRepository {
         }
         return librosDelAutor;
     }
+
+    //Metodo buscar libro mas antiguo
+    public Libro libroMasAntiguo() {
+        Libro masAntiguo = listaLibros.get(0);
+        for (Libro libro : listaLibros) {
+            if (libro.getFechaPublicacion() < masAntiguo.getFechaPublicacion()) {
+                masAntiguo = libro;
+            }
+        }
+        return masAntiguo;
+    }
+
 }
