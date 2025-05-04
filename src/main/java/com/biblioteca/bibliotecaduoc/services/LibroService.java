@@ -53,4 +53,8 @@ public class LibroService {
     public List<Libro> getLibroAutor(String autor){
         return libroRepository.totalLibrosPorAutor(autor);
     }
+
+    public Libro getLibroAntiguo(){
+        return libroRepository.libroMasAntiguo();
+    }
 }
