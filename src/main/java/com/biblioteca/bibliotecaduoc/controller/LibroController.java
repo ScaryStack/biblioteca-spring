@@ -52,7 +52,7 @@ public class LibroController {
     }
 
     @GetMapping("/año/{fechaPublicacion}")
-    public Libro buscarLibroFechaPublicacion(@PathVariable int fechaPublicacion) {
+    public List<Libro> buscarLibroFechaPublicacion(@PathVariable int fechaPublicacion) {
         return libroService.getLibroAnio(fechaPublicacion);
     }
 
