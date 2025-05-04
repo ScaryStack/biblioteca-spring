@@ -50,4 +50,9 @@ public class LibroController {
     public Libro buscarLibroIsbn(@PathVariable String isbn) {
         return libroService.getLibroIsbn(isbn);
     }
+
+    @GetMapping("/año/{fechaPublicacion}")
+    public Libro buscarLibroFechaPublicacion(@PathVariable int fechaPublicacion) {
+        return libroService.getLibroAnio(fechaPublicacion);
+    }
 }
