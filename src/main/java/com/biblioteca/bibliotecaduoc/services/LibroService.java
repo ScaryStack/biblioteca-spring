@@ -32,4 +32,13 @@ public class LibroService {
         libroRepository.eliminar(id);
         return "Producto eliminado";
     }
+
+    public int totalLibros(){
+        return libroRepository.obtenerLibros().size();
+    }
+
+    //accion que deberia hacer el modelo
+    public int totalLibrosV2(){
+        return libroRepository.totalLibros();
+    }
 }
