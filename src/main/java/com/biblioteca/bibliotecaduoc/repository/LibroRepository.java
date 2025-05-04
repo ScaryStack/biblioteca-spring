@@ -97,20 +97,21 @@ public class LibroRepository {
     }
 
     //Metodo buscar por año
-    public Libro totalLibrosPorAnio(int fechaPublicacion){
+    public List<Libro> totalLibrosPorAnio(int fechaPublicacion){
+        List<Libro> librosPorAnio = new ArrayList<>();
         for (Libro libro : listaLibros) {
             if (libro.getFechaPublicacion() == fechaPublicacion){
-                return libro;
+                librosPorAnio.add(libro);
             }
         }
-        return null;
+        return librosPorAnio;
     }
 
     //Metodo buscar por autor
     public List<Libro> totalLibrosPorAutor(String autor){
         List<Libro> librosDelAutor = new ArrayList<>();
         for (Libro libro : listaLibros) {
-            if (libro.getAutor().contains(autor)) {
+            if (libro.getAutor().equals(autor)) {
                 librosDelAutor.add(libro);
             }
         }
