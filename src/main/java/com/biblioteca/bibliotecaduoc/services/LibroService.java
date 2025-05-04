@@ -46,4 +46,7 @@ public class LibroService {
         return libroRepository.buscarPorIsbn(isbn);
     }
 
+    public Libro getLibroAnio(int fechaPublicacion){
+        return libroRepository.totalLibrosPorAnio(fechaPublicacion);
+    }
 }
