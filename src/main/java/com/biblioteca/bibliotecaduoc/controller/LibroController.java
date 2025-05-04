@@ -45,4 +45,9 @@ public class LibroController {
     public int totalLibrosV2() {
         return libroService.totalLibrosV2();
     }
+
+    @GetMapping("/isbn/{isbn}")
+    public Libro buscarLibroIsbn(@PathVariable String isbn) {
+        return libroService.getLibroIsbn(isbn);
+    }
 }
