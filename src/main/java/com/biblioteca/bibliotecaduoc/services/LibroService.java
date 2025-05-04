@@ -49,4 +49,8 @@ public class LibroService {
     public Libro getLibroAnio(int fechaPublicacion){
         return libroRepository.totalLibrosPorAnio(fechaPublicacion);
     }
+
+    public List<Libro> getLibroAutor(String autor){
+        return libroRepository.totalLibrosPorAutor(autor);
+    }
 }
