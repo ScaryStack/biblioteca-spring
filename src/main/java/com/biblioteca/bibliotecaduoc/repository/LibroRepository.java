@@ -90,4 +90,10 @@ public class LibroRepository {
             listaLibros.remove(libro);
         }
     }
+
+    //Metodo total libros
+    public int totalLibros() {
+        return listaLibros.size();
+    }
+
 }
