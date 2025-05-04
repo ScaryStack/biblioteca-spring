@@ -105,4 +105,15 @@ public class LibroRepository {
         }
         return null;
     }
+
+    //Metodo buscar por autor
+    public List<Libro> totalLibrosPorAutor(String autor){
+        List<Libro> librosDelAutor = new ArrayList<>();
+        for (Libro libro : listaLibros) {
+            if (libro.getAutor().contains(autor)) {
+                librosDelAutor.add(libro);
+            }
+        }
+        return librosDelAutor;
+    }
 }
