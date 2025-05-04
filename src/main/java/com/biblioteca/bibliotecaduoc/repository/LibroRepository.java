@@ -44,7 +44,7 @@ public class LibroRepository {
         return lib;
     }
 
-    //
+    //Metodo de actualizacion de libro
     public Libro actualizar(Libro lib) {
         int id = 0;
         int idPosicion = 0;
