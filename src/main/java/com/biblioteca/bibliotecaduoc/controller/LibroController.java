@@ -55,4 +55,9 @@ public class LibroController {
     public Libro buscarLibroFechaPublicacion(@PathVariable int fechaPublicacion) {
         return libroService.getLibroAnio(fechaPublicacion);
     }
+
+    @GetMapping("autor/{autor}")
+    public List<Libro> buscarLibroAutor(@PathVariable String autor) {
+        return libroService.getLibroAutor(autor);
+    }
 }
