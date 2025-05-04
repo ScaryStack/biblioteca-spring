@@ -11,7 +11,8 @@ import lombok.NoArgsConstructor;
 
 public class Libro {
 
-    private int idLibro;
+    private int id;
+    private String isbn;
     private String titulo;
     private String editorial;
     private int fechaPublicacion;
