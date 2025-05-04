@@ -96,4 +96,13 @@ public class LibroRepository {
         return listaLibros.size();
     }
 
+    //Metodo buscar por año
+    public Libro totalLibrosPorAnio(int fechaPublicacion){
+        for (Libro libro : listaLibros) {
+            if (libro.getFechaPublicacion() == fechaPublicacion){
+                return libro;
+            }
+        }
+        return null;
+    }
 }
