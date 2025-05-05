@@ -129,4 +129,15 @@ public class LibroRepository {
         return masAntiguo;
     }
 
+    //Metodo buscar libro mas nuevo
+    public Libro libroMasNuevo() {
+        Libro masNuevo = listaLibros.get(0);
+        for (Libro libro : listaLibros) {
+            if (libro.getFechaPublicacion() > masNuevo.getFechaPublicacion()) {
+                masNuevo = libro;
+            }
+        }
+        return masNuevo;
+    }
+
 }
