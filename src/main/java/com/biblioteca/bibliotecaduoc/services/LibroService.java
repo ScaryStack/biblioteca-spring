@@ -61,4 +61,8 @@ public class LibroService {
     public Libro getLibroNuevo(){
         return libroRepository.libroMasNuevo();
     }
+
+    public List<Libro> getLibroOrdenado(){
+        return libroRepository.librosOrdenadoAnio();
+    }
 }
