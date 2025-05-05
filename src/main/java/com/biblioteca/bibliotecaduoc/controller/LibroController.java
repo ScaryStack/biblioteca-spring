@@ -65,4 +65,9 @@ public class LibroController {
     public Libro buscarLibroAntiguo() {
         return libroService.getLibroAntiguo();
     }
+
+    @GetMapping("/nuevo")
+    public Libro buscarLibroNuevo() {
+        return libroService.getLibroNuevo();
+    }
 }
