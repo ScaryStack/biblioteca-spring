@@ -12,7 +12,10 @@ import java.util.Date;
 @NoArgsConstructor
 public class Prestamo {
 
-    private int id_prestamo;
+    //contador para incremento
+    private static int contadorId = 1;
+
+    private int id_prestamo = contadorId++;
     private int id_libro;
     private String run_solicitante;
     private Date fecha_solicitud;
@@ -20,4 +23,7 @@ public class Prestamo {
     private int cantidad_dias;
     private int multas;
 
+    public void setMultas(int multas) {
+        this.multas = Math.max(multas, 0);
+    }
 }
