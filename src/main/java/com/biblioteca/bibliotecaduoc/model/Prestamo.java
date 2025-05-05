@@ -16,7 +16,7 @@ public class Prestamo {
     private static int contadorId = 1;
 
     private int id_prestamo = contadorId++;
-    private Libro libro;
+    private int id_libro;
     private String run_solicitante;
     private Date fecha_solicitud;
     private Date fecha_entrega;
@@ -27,7 +27,4 @@ public class Prestamo {
         this.multas = Math.max(multas, 0);
     }
 
-    public int getIdLibro() {
-        return libro != null ? libro.getId() : -1;
-    }
 }
