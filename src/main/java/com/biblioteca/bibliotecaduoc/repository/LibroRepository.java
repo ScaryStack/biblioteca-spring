@@ -5,6 +5,7 @@ import com.biblioteca.bibliotecaduoc.model.Libro;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Repository
@@ -138,6 +139,16 @@ public class LibroRepository {
             }
         }
         return masNuevo;
+    }
+
+    //Metodo ordenar por año
+    public List<Libro> librosOrdenadoAnio() {
+        List<Libro> librosOrdenado = new ArrayList<>();
+        for (Libro libro : listaLibros) {
+            librosOrdenado.add(libro);
+            librosOrdenado.sort(Comparator.comparing(Libro::getFechaPublicacion));
+        }
+        return librosOrdenado;
     }
 
 }
